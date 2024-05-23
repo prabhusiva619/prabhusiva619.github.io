@@ -17,7 +17,7 @@
 5. In the index.html file, update the client token and application ID to the values from your RUM application
 
 ##Already have a GitHub pages site?
-1. Github only allows one site.guthub.io page which has to be named after your username, i.e starryknight620.github.io
+1. Github only allows one site.github.io page which has to be named after your username, i.e starryknight620.github.io
 2. To get around this, create an organization under your account
 3. Navigate to that organization
 4. Repeat steps 1-5 from the ##Steps section above
