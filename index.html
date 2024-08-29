@@ -26,8 +26,8 @@
       useCrossSiteSessionCookie: true,
       beforeSend: (event, context) => {
         // collect a RUM resource's response headers
-        if (event.type === 'view') {
-          userAgent = browserWindow.navigator.userAgent
+        if (event.type === 'resource' && event.resource.type === 'fetch') {
+            event.context.responseHeaders = Object.fromEntries(context.response.headers)
         }
         return userAgent
     },
