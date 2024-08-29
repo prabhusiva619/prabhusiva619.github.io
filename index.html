@@ -24,6 +24,14 @@
       trackSessionAcrossSubdomains: true,
       usePartitionedCrossSiteSessionCookie: true,
       useCrossSiteSessionCookie: true,
+      beforeSend: (event, context) => {
+        // collect a RUM resource's response headers
+        if (event.type === 'resource' && event.resource.type === 'fetch') {
+         event.context.requestHeaders = Object.fromEntries(context.request.headers)
+        }
+        return true
+    },
+});
     });
 </script>
 <!-- ======= ngupta dogpark RUM end======= -->
