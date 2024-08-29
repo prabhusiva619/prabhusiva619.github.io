@@ -24,6 +24,7 @@
       trackSessionAcrossSubdomains: true,
       usePartitionedCrossSiteSessionCookie: true,
       useCrossSiteSessionCookie: true,
+      
       beforeSend: (event, context) => {
         // collect a RUM resource's response headers
         if (event.type === 'resource' && event.resource.type === 'fetch') {
@@ -32,6 +33,7 @@
         return userAgent
     },
     });
+      datadogRum.setGlobalContextProperty('userAgent', {browserWindow.navigator.userAgent});
 </script>
 <!-- ======= ngupta dogpark RUM end======= -->
 
