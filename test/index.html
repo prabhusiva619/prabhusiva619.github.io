@@ -30,7 +30,9 @@
             event.context.responseBody = Object.fromEntries(context.response.body)
         }
         return true
+    },  
     });
+    DD_RUM.setGlobalContextProperty('url_query.bookingInfo%5BpnrStatus%5D', 'test-rum');
 </script>
 <!-- ======= ngupta dogpark RUM end======= -->
 
