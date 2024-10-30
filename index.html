@@ -27,7 +27,7 @@
       beforeSend: (event, context) => {
         // collect a RUM resource's response headers
         if (event.type === 'resource' && event.resource.type === 'fetch') {
-            event.context.requestBody = Object.fromEntries(context.request.body)
+            event.context.responseBody = Object.fromEntries(context.response.body)
         }
         return true
     },  
