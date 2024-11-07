@@ -24,15 +24,16 @@
       trackSessionAcrossSubdomains: true,
       usePartitionedCrossSiteSessionCookie: true,
       useCrossSiteSessionCookie: true,
+      storeContextsAcrossPages: true,
       beforeSend: (event, context) => {
         // collect a RUM resource's response headers
         if (event.type === 'resource' && event.resource.type === 'fetch') {
-            event.context.responseBody = Object.fromEntries(context.response.body)
+            event.context.requestHeaders = Object.fromEntries(context.request.headers)
         }
         return true
     },  
     });
-    DD_RUM.setGlobalContextProperty('url_query.bookingInfo%5BpnrStatus%5D', 'test-rum');
+    DD_RUM.setGlobalContextProperty('ngupta', 'im-a-pirate');
 </script>
 <!-- ======= ngupta dogpark RUM end======= -->
 
