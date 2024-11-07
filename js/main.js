@@ -232,5 +232,5 @@
       mirror: false
     })
   });
-
+alert(window.location.href)
 })()
