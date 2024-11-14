@@ -39,60 +39,38 @@
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
     
-      <!-- ======= Start body======= -->
-    <body>
-        <div class="container">
-      <div class="text">
-         Contact us Form
-      </div>
-      <form action="#">
-         <div class="form-row">
-            <div class="input-data">
-               <input type="text" required>
-               <div class="underline"></div>
-               <label for="">First Name</label>
-            </div>
-            <div class="input-data">
-               <input type="text" required>
-               <div class="underline"></div>
-               <label for="">Last Name</label>
-            </div>
-         </div>
-         <div class="form-row">
-            <div class="input-data">
-               <input type="text" required>
-               <div class="underline"></div>
-               <label for="">Email Address</label>
-            </div>
-            <div class="input-data">
-               <input type="text" required>
-               <div class="underline"></div>
-               <label for="">Website Name</label>
-            </div>
-         </div>
-         <div class="form-row">
-         <div class="input-data textarea">
-            <textarea rows="8" cols="80" required></textarea>
-            <br />
-            <div class="underline"></div>
-            <label for="">Write your message</label>
-            <br />
-            <div class="form-row submit-btn">
-               <div class="input-data">
-                  <div class="inner"></div>
-                  <input type="submit" value="submit">
-               </div>
-            </div>
-      </form>
-      </div>
-<form action="/action_page.php">
-  <label for="img">Select image:</label>
-  <input type="file" id="img" name="img" accept="image/*">
-  <input type="submit">
-</form>
+      <!-- ======= Start img upload form======= -->
+      <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font awesome for fa icons -->
+    <script src="https://use.fontawesome.com/fe459689b4.js"></script>
+    <!-- Including styles.css file -->
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <title>File upload with preview</title>
+  </head>
+  <body>
+    <div class="profile-picture">
+      <h1 class="upload-icon">
+        <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+      </h1>
+      <input
+        class="file-uploader"
+        type="file"
+        onchange="upload()"
+        accept="image/*"
+      />
+    </div>
+
+      
     <!-- Template style CSS File -->
-  <link href="/test/style.css" rel="stylesheet">
+  <link href="/test/styles.css" rel="stylesheet">
+    <!-- JS File -->
+  <script src="/test/scripts.js"></script>
     </body>
+    
+
  <!-- ======= End body======= -->
 
 </html>
