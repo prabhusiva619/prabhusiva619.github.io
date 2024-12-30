@@ -8,32 +8,23 @@
 </script>
 <script>
     window.DD_RUM && window.DD_RUM.init({
-      applicationId: '012a1d19-38df-4e55-9412-6ceb64e72490',
       clientToken: 'pub02889030d6147b469c6736c64e609b35',
+      applicationId: '012a1d19-38df-4e55-9412-6ceb64e72490',
+      // `site` refers to the Datadog site parameter of your organization
+      // see https://docs.datadoghq.com/getting_started/site/
       site: 'datadoghq.com',
-      service: 'datadogrum-pirates-homepage',
-      env: 'sandbox',
+      service: 'datadogrum-pirates',
+      env: 'test',
       // Specify a version number to identify the deployed version of your application in Datadog
-      // version: '1.0.0', 
-      sessionSampleRate: 0,
+      // version: '1.0.0',
+      sessionSampleRate: 100,
       sessionReplaySampleRate: 100,
       trackUserInteractions: true,
       trackResources: true,
       trackLongTasks: true,
       defaultPrivacyLevel: 'allow',
-      trackSessionAcrossSubdomains: true,
-      usePartitionedCrossSiteSessionCookie: true,
-      useCrossSiteSessionCookie: true,
-      storeContextsAcrossPages: true,
-      beforeSend: (event, context) => {
-        // collect a RUM resource's response headers
-        if (event.type === 'resource' && event.resource.type === 'fetch') {
-            event.context.requestHeaders = Object.fromEntries(context.request.headers)
-        }
-        return true
-    },  
+      setGlobalContextProperty: ('arrrr', 'im-a-pirate'),
     });
-    DD_RUM.setGlobalContextProperty('ngupta', 'im-a-pirate');
 </script>
 <!-- ======= ngupta dogpark RUM end======= -->
 
