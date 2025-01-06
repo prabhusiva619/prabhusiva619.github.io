@@ -13,26 +13,26 @@
       // `site` refers to the Datadog site parameter of your organization
       // see https://docs.datadoghq.com/getting_started/site/
       site: 'datadoghq.com',
-      service: 'datadogrum-pirates-test-inputs',
+      service: 'datadogrum-pirates-troubleshooting-page',
       env: 'test',
       // Specify a version number to identify the deployed version of your application in Datadog
-      version: '1.0.0',
+      version: '1.1.0',
       sessionSampleRate: 100,
       sessionReplaySampleRate: 100,
       trackUserInteractions: true,
       trackResources: true,
       trackLongTasks: true,
-      defaultPrivacyLevel: 'allow',
-      setGlobalContextProperty: ('arrrr', 'im-a-pirate'),
+      defaultPrivacyLevel: 'allow',      
+      allowFallbackToLocalStorage: 'true',
     });
+    datadogRum.setGlobalContextProperty('arrrr', 'im-a-pirate');
 </script>
 <!-- ======= ngupta dogpark RUM end======= -->
 
-  <!-- ======= Mobile nav toggle button ======= -->
+<!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
 <!-- ======= Start <head> ======= -->
-
 <head>
 
  <meta charset="utf-8">
@@ -64,9 +64,6 @@
 <!-- ======= End <head> ======= -->
 
 <body>
-
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
 <!-- ======= Header ======= -->
   <header id="header">
@@ -101,14 +98,13 @@
   <script src="/js/vendor/noframework.waypoints.js"></script>
   <script src="/js/vendor/validate.js"></script>
 
-  <!-- Template Main JS File -->
+<!-- Template Main JS File -->
   <script src="/js/main.js"></script>
-</body>   
-    <!-- Template style CSS File -->
-  <link href="/test/styles.css" rel="stylesheet">
-    </body>
-    
 
+</body>   
+  <!-- Template style CSS File -->
+  <link href="/test/styles.css" rel="stylesheet">
+</body>
  <!-- ======= End body======= -->
 
 </html>

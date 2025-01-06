@@ -16,15 +16,16 @@
       service: 'datadogrum-pirates',
       env: 'test',
       // Specify a version number to identify the deployed version of your application in Datadog
-      version: '1.0.0',
+      version: '1.1.0',
       sessionSampleRate: 100,
       sessionReplaySampleRate: 100,
       trackUserInteractions: true,
       trackResources: true,
       trackLongTasks: true,
       defaultPrivacyLevel: 'allow',
-      setGlobalContextProperty: ('arrrr', 'im-a-pirate'),
+      allowFallbackToLocalStorage: 'true',  
     });
+    datadogRum.setGlobalContextProperty('arrrr', 'im-a-pirate');
 </script>
 <!-- ======= ngupta dogpark RUM end======= -->
 
