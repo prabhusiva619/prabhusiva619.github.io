@@ -103,12 +103,13 @@ p {
 /* Main Container */
 #main { 
 	text-align: center; 
+	margin-left: 250px;  /* Adjust this according to sidebar width */
+    	padding: 20px;
 } 
 
 /* Game Instruction Text */
 #ins { 
-	font-family: Verdana,Geneva, 
-					Tahoma, sans-serif; 
+	font-family: Verdana,Geneva, Tahoma, sans-serif; 
 	color: dodgerblue; 
 }
 
