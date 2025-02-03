@@ -29,6 +29,12 @@
       allowFallbackToLocalStorage: 'true',  
     });
     window.DD_RUM && window.DD_RUM.setGlobalContextProperty('arrrrr', 'im-a-pirate');
+    window.DD_LOGS && window.DD_LOGS.init({
+                clientToken: 'puba31e716117e774560333f0c4c3700067',
+                site: 'datadoghq.com',
+                forwardErrorsToLogs: true,
+                sessionSampleRate: 100
+            });
 </script>
 <!-- ======= ngupta dogpark RUM end======= -->
 
